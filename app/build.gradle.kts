@@ -28,6 +28,7 @@ kotlin {
   sourceSets {
     commonMain {
       dependencies {
+        implementation(project(":libs"))
         implementation(libs.kotlin.logging)
       }
     }
