@@ -10,6 +10,11 @@ repositories {
 
 kotlin {
   explicitApi()
+  compilerOptions.freeCompilerArgs.addAll(
+    "-Xexplicit-context-parameters",
+    "-Xreturn-value-checker=full",
+    "-Xcollection-literals",
+  )
 
   @OptIn(ExperimentalKotlinGradlePluginApi::class)
   jvm {
