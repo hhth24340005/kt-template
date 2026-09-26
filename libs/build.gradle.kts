@@ -1,3 +1,5 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+
 plugins {
   alias(libs.plugins.kotlin.multiplatform)
   alias(libs.plugins.ksp)
@@ -30,4 +32,13 @@ kotlin {
 
 tasks.withType<Test>().configureEach {
   useJUnitPlatform()
+}
+
+tasks.withType<AbstractTestTask>().configureEach {
+  testLogging {
+    events("passed", "skipped", "failed")
+    exceptionFormat = TestExceptionFormat.FULL
+    showStandardStreams = true
+    showStackTraces = false
+  }
 }

@@ -1,3 +1,4 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 
 plugins {
@@ -57,4 +58,13 @@ kotlin {
 
 tasks.withType<Test>().configureEach {
   useJUnitPlatform()
+}
+
+tasks.withType<AbstractTestTask>().configureEach {
+  testLogging {
+    events("passed", "skipped", "failed")
+    exceptionFormat = TestExceptionFormat.FULL
+    showStandardStreams = true
+    showStackTraces = false
+  }
 }
