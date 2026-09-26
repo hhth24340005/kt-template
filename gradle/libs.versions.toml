@@ -1,13 +1,13 @@
 [versions]
-kotlin = "2.4.20"
+kotlin = "2.5.0-Beta1"
 coroutines = "1.11.0"
 serialization = "1.11.0"
 atomicfu = "0.33.0"
 datetime = "0.8.0"
-collections-immutable = "0.5.1"
+collections-immutable = "0.5.2"
 arrow = "2.2.3"
 kotlin-logging = "8.0.4"
-logback = "1.6.3"
+logback = "1.6.4"
 
 [libraries]
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
