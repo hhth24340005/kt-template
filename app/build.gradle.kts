@@ -10,7 +10,7 @@ plugins {
 kotlin {
   explicitApi()
   compilerOptions.freeCompilerArgs.addAll(
-    "-Xexplicit-context-parameters",
+    "-Xexplicit-context-arguments",
     "-Xreturn-value-checker=full",
     "-Xcollection-literals",
   )
