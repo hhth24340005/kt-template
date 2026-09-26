@@ -12,6 +12,7 @@ kotlin {
     "-Xexplicit-context-arguments",
     "-Xreturn-value-checker=full",
     "-Xcollection-literals",
+    "-Xname-based-destructuring=complete",
   )
   jvm()
 
