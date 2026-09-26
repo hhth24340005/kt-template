@@ -1,5 +1,7 @@
 plugins {
   alias(libs.plugins.kotlin.multiplatform)
+  alias(libs.plugins.ksp)
+  alias(libs.plugins.kotest)
 }
 
 kotlin {
@@ -10,4 +12,22 @@ kotlin {
     "-Xcollection-literals",
   )
   jvm()
+
+  sourceSets {
+    commonTest {
+      dependencies {
+        implementation(libs.bundles.kotest)
+      }
+    }
+
+    jvmTest {
+      dependencies {
+        implementation(libs.kotest.runner.junit5)
+      }
+    }
+  }
+}
+
+tasks.withType<Test>().configureEach {
+  useJUnitPlatform()
 }

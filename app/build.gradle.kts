@@ -2,6 +2,8 @@ import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 
 plugins {
   alias(libs.plugins.kotlin.multiplatform)
+  alias(libs.plugins.ksp)
+  alias(libs.plugins.kotest)
 }
 
 kotlin {
@@ -33,10 +35,26 @@ kotlin {
       }
     }
 
+    commonTest {
+      dependencies {
+        implementation(libs.bundles.kotest)
+      }
+    }
+
+    jvmTest {
+      dependencies {
+        implementation(libs.kotest.runner.junit5)
+      }
+    }
+
     jvmMain {
       dependencies {
         runtimeOnly(libs.logback.classic)
       }
     }
   }
+}
+
+tasks.withType<Test>().configureEach {
+  useJUnitPlatform()
 }
