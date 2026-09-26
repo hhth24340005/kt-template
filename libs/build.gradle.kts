@@ -13,6 +13,7 @@ kotlin {
     "-Xreturn-value-checker=full",
     "-Xcollection-literals",
     "-Xname-based-destructuring=complete",
+    "-Xcompanion-blocks-and-extensions",
   )
   jvm()
 
