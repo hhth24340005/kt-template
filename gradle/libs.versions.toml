@@ -1,30 +1,17 @@
-[versions]
-kotlin = "2.5.0-Beta1"
-ksp = "2.3.12"
-coroutines = "1.11.0"
-serialization = "1.11.0"
-atomicfu = "0.33.0"
-datetime = "0.8.0"
-collections-immutable = "0.5.2"
-arrow = "2.2.3"
-kotlin-logging = "8.0.4"
-logback = "1.6.4"
-kotest = "6.2.5"
-
 [libraries]
-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
-kotlinx-atomicfu = { module = "org.jetbrains.kotlinx:atomicfu", version.ref = "atomicfu" }
-kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "datetime" }
-kotlinx-collections-immutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "collections-immutable" }
-arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
-arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref = "arrow" }
-kotlin-logging = { module = "io.github.oshai:kotlin-logging", version.ref = "kotlin-logging" }
-logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
-kotest-framework-engine = { module = "io.kotest:kotest-framework-engine", version.ref = "kotest" }
-kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
-kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
-kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version = "+" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "+" }
+kotlinx-atomicfu = { module = "org.jetbrains.kotlinx:atomicfu", version = "+" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version = "+" }
+kotlinx-collections-immutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version = "+" }
+arrow-core = { module = "io.arrow-kt:arrow-core", version = "+" }
+arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version = "+" }
+kotlin-logging = { module = "io.github.oshai:kotlin-logging", version = "+" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version = "+" }
+kotest-framework-engine = { module = "io.kotest:kotest-framework-engine", version = "+" }
+kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version = "+" }
+kotest-property = { module = "io.kotest:kotest-property", version = "+" }
+kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version = "+" }
 
 [bundles]
 arrow = [
@@ -38,8 +25,8 @@ kotest = [
 ]
 
 [plugins]
-kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
-kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-kotlinx-atomicfu = { id = "org.jetbrains.kotlinx.atomicfu", version.ref = "atomicfu" }
-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-kotest = { id = "io.kotest", version.ref = "kotest" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version = "+" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version = "+" }
+kotlinx-atomicfu = { id = "org.jetbrains.kotlinx.atomicfu", version = "+" }
+ksp = { id = "com.google.devtools.ksp", version = "+" }
+kotest = { id = "io.kotest", version = "+" }

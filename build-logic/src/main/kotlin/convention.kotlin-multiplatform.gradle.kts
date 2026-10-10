@@ -17,3 +17,7 @@ kotlin {
 repositories {
   mavenCentral()
 }
+
+dependencyLocking {
+  lockAllConfigurations()
+}
