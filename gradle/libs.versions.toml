@@ -12,6 +12,7 @@ kotest-framework-engine = { module = "io.kotest:kotest-framework-engine", versio
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version = "+" }
 kotest-property = { module = "io.kotest:kotest-property", version = "+" }
 kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version = "+" }
+ktlint-cli = { module = "io.github.ktlint.core:ktlint-cli", version = "+" }
 
 [bundles]
 arrow = [
@@ -30,3 +31,4 @@ kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", vers
 kotlinx-atomicfu = { id = "org.jetbrains.kotlinx.atomicfu", version = "+" }
 ksp = { id = "com.google.devtools.ksp", version = "+" }
 kotest = { id = "io.kotest", version = "+" }
+detekt = { id = "dev.detekt", version = "+" }
