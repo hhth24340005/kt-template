@@ -1,32 +1,24 @@
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 plugins {
-  alias(libs.plugins.kotlin.multiplatform)
-  alias(libs.plugins.ksp)
-  alias(libs.plugins.kotest)
+  id("org.jetbrains.kotlin.multiplatform")
+  id("com.google.devtools.ksp")
+  id("io.kotest")
 }
 
-kotlin {
-  explicitApi()
-  compilerOptions.freeCompilerArgs.addAll(
-    "-Xexplicit-context-arguments",
-    "-Xreturn-value-checker=full",
-    "-Xcollection-literals",
-    "-Xname-based-destructuring=complete",
-    "-Xcompanion-blocks-and-extensions",
-  )
-  jvm()
+val libs: VersionCatalog = the<VersionCatalogsExtension>().named("libs")
 
+kotlin {
   sourceSets {
     commonTest {
       dependencies {
-        implementation(libs.bundles.kotest)
+        implementation(libs.findBundle("kotest").get())
       }
     }
 
     jvmTest {
       dependencies {
-        implementation(libs.kotest.runner.junit5)
+        implementation(libs.findLibrary("kotest-runner-junit5").get())
       }
     }
   }
